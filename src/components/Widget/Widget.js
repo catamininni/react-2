@@ -2,7 +2,7 @@ import './Widget.css';
 
 function Icono() {
     return(
-<div class='icono'><i class="fas fa-shopping-cart"></i></div> 
+<div className='icono'><i class="fas fa-shopping-cart"></i></div> 
     );
 }
 
