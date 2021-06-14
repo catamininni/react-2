@@ -1,20 +1,38 @@
 import React from 'react'
 import Counter from '../Counter/Counter'
 
-const ItemList = () => {
+  const ItemList = () => {
+    const[localItems, setLocalItems] = useState ([])
+    useEffect(() => {
+        const items = [
+            {id: 1, name: 'Pantalones rayados', price: 300},
+            {id: 1, name: 'Vestido azul', price: 500},
+            {id: 1, name: 'Remera', price: 200},
+        ]
+        const getItems = (productos) => {
+            return new Promise((resolve, reject) =>{
+                setItemout(() => {
+                    resolve(productos)
+                }, 2000)
+            })
+        }
 
-  const onAdd = (amount) => 
-{
-       console.log('compraste ${amount}productos') 
-}    
-return(
-      <div className='mt-3'>
-      <div className='titulo'><h2>Ah!Cucu</h2>
-      < Counter initial={1} stock={6} onAdd={onAdd} /> 
+        getItems(items)
+            .then(result => setLocalItems(result))
+            .catch(error => console.log(error.message))
+    },[])
+    
+return (
+      <div className='row'>
+                   {localItems.map((element,i) =>{
+            return (
+                        <div className="col-4 row__itemlist">
+                <Item name={element.name} value = {element.value} stock={element.stock} />
+            </div>
+            );
+         })};
       </div>
-      </div>
-
-    );
-  }
+    )
+}
 
   export default ItemList;
