@@ -1,5 +1,5 @@
-import React, { useState }from "react" 
-import './Counter.css'
+import React, { useState }from "react";
+import './Counter.css';
 
 const Counter = ({initial, stock, onAdd}) => {
 

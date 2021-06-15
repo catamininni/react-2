@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react';
+import Counter from'../Counter/Counter';
 
   const ItemList = () => {
     const[localItems, setLocalItems] = useState ([])
@@ -10,13 +10,12 @@ import React from 'react'
             {id: 1, name: 'Remera', price: 200},
         ]
         const getItems = (productos) => {
-            return new Promise((resolve, reject) =>{
+            return new Promise ((resolve, reject) =>{
                 setItemout(() => {
                     resolve(productos)
                 }, 2000)
             })
         }
-
         getItems(items)
             .then(result => setLocalItems(result))
             .catch(error => console.log(error.message))
@@ -24,10 +23,10 @@ import React from 'react'
     
 return (
       <div className='row'>
-                   {localItems.map((element,i) =>{
+                   {localItems.map ((element) =>{
             return (
                         <div className="col-4 row__itemlist">
-                <Item name={element.name} value = {element.value} stock={element.stock} />
+                <Item name={element.id} value = {element.name} stock={element.price} />
             </div>
             );
          })};
