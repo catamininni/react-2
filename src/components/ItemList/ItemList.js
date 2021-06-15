@@ -1,5 +1,5 @@
 import React from 'react'
-import Counter from '../Counter/Counter'
+
 
   const ItemList = () => {
     const[localItems, setLocalItems] = useState ([])
