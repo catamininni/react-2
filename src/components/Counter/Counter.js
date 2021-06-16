@@ -1,5 +1,6 @@
 import React, { useState }from "react";
 import './Counter.css';
+import '../Main/Main.js'
 
 const Counter = ({initial, stock, onAdd}) => {
 
@@ -23,4 +24,4 @@ const Counter = ({initial, stock, onAdd}) => {
     )
 }
 
-export default Counter
+export default Counter;
