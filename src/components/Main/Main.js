@@ -10,7 +10,7 @@ function Main() {
     <div className="App">
       <NavBar/>
       <ItemList/>
-      <Counter/>
+      <Counter initial={1} stock={10}/>
     </div>
   );
 }

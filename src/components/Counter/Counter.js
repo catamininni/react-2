@@ -12,10 +12,15 @@ const Counter = ({initial, stock, onAdd}) => {
 
     }
 
+    const removeItem = () => {
+
+        items > 0 && setItems (items-1)
+    }
+
     return (
         <div className='container counter mt-3 '>
             <div className='d-flex align-items-center justify-content-center mb1'>
-            <i className="far fa-minus-square counterButton"></i>
+            <i className="far fa-minus-square counterButton" onClick={removeItem}></i>
             <span className="counterAmount">{items}</span>
             <i className="far fa-plus-square counter Button" onClick={addItems}></i>
             </div>

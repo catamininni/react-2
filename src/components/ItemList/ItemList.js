@@ -5,7 +5,7 @@ import Item from '../Item/Items'
     const[localItems, setLocalItems] = useState ([])
     useEffect(() => {
         const items = [
-            {id: 1, name: 'Pantalones rayados', price: 300},
+            {id: 1, name: 'Pantalones rayados', price: 300, img:"https://www.notebookcheck.org/fileadmin/Notebooks/Asus/Zephyrus_M15_GU502L/4zu3_Asus_Zephyrus_M15_GU502L.jpg"},
             {id: 1, name: 'Vestido azul', price: 500},
             {id: 1, name: 'Remera', price: 200},
         ]
@@ -26,7 +26,7 @@ return (
                    {localItems.map ((element) =>{
             return (
                         <div className="col-4 row__itemlist">
-                <Item id={element.id}  name = {element.name} price={element.price} />
+                <Item id={element.id}  name = {element.name} price={element.price} img={element.img}/>
             </div>
             );
          })}
