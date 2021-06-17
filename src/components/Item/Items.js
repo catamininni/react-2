@@ -6,7 +6,7 @@ const Items = ({id, name, price, img}) => {
     return(
         <div className='card'>
             <h1>{name}</h1>
-            <src>{img}</src>
+            <img src>{img}</img>
             <h2>${price}</h2>
 
         </div>
