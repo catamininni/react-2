@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
             return new Promise((resolve,reject) => {
                 setTimeout(() => {
                     resolve(producto);
-                }, 6000);
+                }, 3000);
             });
         }
         getProducto(producto)
@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div className="container-fluid container__IDT">{
-            <ItemDetail id= {localProduct.id}  name= {localProduct.name} price={LocalProduct.price} img={LocalProduct.img}/>
+            <ItemDetail id= {localProduct.id}  name= {localProduct.name} price={localProduct.price} img={localProduct.img}/>
         }</div>
     );
 };
