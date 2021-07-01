@@ -9,7 +9,6 @@ const Counter = ({initial, stock, onAdd}) => {
     const addItems = () => {
       
         items < stock ? setItems(items+1) : alert('no hay mas stock')
-
     }
 
     const removeItem = () => {
@@ -24,7 +23,7 @@ const Counter = ({initial, stock, onAdd}) => {
             <span className="counterAmount">{items}</span>
             <i className="far fa-plus-square counter Button" onClick={addItems}></i>
             </div>
-           <div className='botonA'> <button className='btn btn-secondary w-100' onClick={() => addItems}>Agregar</button></div>
+           <div className='botonA'> <button className='btn btn-secondary w-100' onClick={() => onAdd(items)}>Agregar</button></div>
         </div>
     )
 }

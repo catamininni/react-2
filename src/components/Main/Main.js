@@ -2,7 +2,6 @@ import NavBar from '../NavBar/NavBar.js';
 import './Main.css';
 import ItemList from '../ItemList/ItemList.js';
 import Counter from '../Counter/Counter'
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 function Main() {
