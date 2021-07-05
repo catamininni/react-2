@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
             return new Promise((resolve,reject) => {
                 setTimeout(() => {
                     resolve(producto);
-                }, 3000);
+                }, 1000);
             });
         }
         getProducto(producto)
