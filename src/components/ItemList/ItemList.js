@@ -6,9 +6,20 @@ import Counter from '../Counter/Counter'
     const[localItems, setLocalItems] = useState ([])
     useEffect(() => {
         const items = [
-            {id: 1, name: 'Computadora Mac', price: 300000, img:"./images/apple1.jpeg"},
-            {id: 2, name: 'Computadora Lenovo', price: 250000, img:"./images/lenovo-01-2.jpeg"},
-            {id: 3, name: 'Computadora Asus', price: 200000, img:"./images/asus.jpg"},
+            {id: 1, 
+            name: 'Computadora Mac', 
+            price: 300000, 
+            img:"./images/apple1.jpeg"},
+
+            {id: 2, 
+            name: 'Computadora Lenovo', 
+            price: 250000, 
+            img:"./images/lenovo-01-2.jpeg"},
+
+            {id: 3, 
+            name: 'Computadora Asus', 
+            price: 200000, 
+            img:"./images/asus.jpg"},
         ]
         const getItems = (productos) => {
             return new Promise ((resolve, reject) =>{
@@ -27,7 +38,10 @@ return (
                    {localItems.map ((element) =>{
             return (
                 <div className="col-4 row__itemlist">
-                <Item id={element.id}  name = {element.name} price={element.price} img={element.img}/>
+                <Item id={element.id}  
+                name = {element.name} 
+                price={element.price} 
+                img={element.img}/>
             </div>
             );
          })}

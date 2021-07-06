@@ -2,6 +2,7 @@ import React from 'react';
 import './ItemDetail.css';
 import Counter from '../Counter/Counter';
 import Item from '../Item/Items'
+import {NavLink} from 'react-router-dom';
 
 
 const ItemDetail = ({stock, name, price, img, description}) => {

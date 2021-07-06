@@ -12,16 +12,24 @@ import{
 
 function Main() {
   return (
-    <div className="App">
-       <NavBar/>
+    <div cla
+    ssName="App">
       <Router>
+      <NavBar/>
       <Switch>
-        <Route path="/productos">
+
+      <Route exact path="/">
         <ItemList/>
       </Route>
-      <Route path="/detalles">
+
+      <Route path='/products/:id'>
       <ItemDetailContainer/>
       </Route>
+
+      <Route path='/informacion/:id'>
+      <h3>Mas informacion...</h3>
+      </Route>
+
       </Switch>
     </Router>
     </div>
