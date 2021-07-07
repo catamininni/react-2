@@ -30,6 +30,10 @@ function Main() {
       <h3>Mas informacion...</h3>
       </Route>
 
+      <Route path="/cart">
+      <h1> Este es el cart </h1>
+      </Route>
+
       </Switch>
     </Router>
     </div>

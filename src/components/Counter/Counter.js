@@ -1,6 +1,7 @@
 import React, { useState }from "react";
 import './Counter.css';
 import '../Main/Main.js'
+import ItemList from '../ItemList/ItemList'
 
 const Counter = ({initial, stock, onAdd}) => {
 
@@ -27,5 +28,11 @@ const Counter = ({initial, stock, onAdd}) => {
         </div>
     )
 }
+
+Counter.propTypes = {
+    initial: PropTypes.number,
+    stock: PropTypes.number,
+    onAdd: PropTypes.func.isRequired,
+  };
 
 export default Counter;

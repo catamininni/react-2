@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+/*import React, { useEffect, useState } from 'react';
 import Item from '../Item/Items'
 import Counter from '../Counter/Counter'
 
@@ -49,4 +49,54 @@ return (
     )
 }
 
-  export default ItemList;
+  export default ItemList;*/
+
+import React from 'react';
+import PropTypes from "prop-types";
+import Item from '../Item/Items';
+import Counter from '../Counter/Counter';
+
+const ItemList = ({ products, filteredProduct }) => {
+    // Will show X Items. Each Item has an ItemCount.
+    // console.log("Filtered product dede ItemList", filteredProduct);
+    // console.log("filteredproduct length:", filteredProduct.length, "products length:", products.length);
+    return (
+      <>
+        { products.length ?
+            products.map( ({title, id, stock,category, price, img, description}) => {
+                return (
+                        <Item
+                            id={id}
+                            title={title}
+                            category={category}
+                            stock={stock}
+                            price={price}
+                            img={img}
+                            description={description}
+                        />
+                )
+            })
+            :
+             filteredProduct.map( ({title, id, stock,category, price, img, description}) => {
+                return (
+                        <Item
+                            id={id}
+                            title={title}
+                            category={category}
+                            stock={stock}
+                            price={price}
+                            img={img}
+                            description={description}
+                        />
+                )
+            })
+        }
+      </>
+    )
+}
+
+ItemList.propTypes = {
+   products: PropTypes.array,
+};
+
+export default ItemList;

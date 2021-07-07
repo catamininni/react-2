@@ -1,6 +1,6 @@
 import './NavBar.css';
 import Widget from '../Widget/Widget.js';
-import Main from '../Main/Main.js'
+import PropTypes from "prop-types";
 import{
     Link,
 } from "react-router-dom";
@@ -13,9 +13,13 @@ function NavBar() {
                 <Widget/>
                 <Link to='/'>Inicio</Link>
                 <Link to="/product/:id">Productos</Link>
-                <Link to=""></Link>
+                <Link to="/cart"></Link>
         </nav>
     );
 }
 
+Navbar.propTypes = {
+    items: PropTypes.array,
+  };
+  
 export default NavBar;
